@@ -5,11 +5,11 @@ body {
 
 @font-face {
   font-family: 'Poppins';
-  src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
+  src: url('./../assets/fonts/Poppins/Poppins-Regular.ttf');
 }
 @font-face {
   font-family: 'Poppins-h2';
-  src: url('./assets/fonts/Poppins/Poppins-Medium.ttf');
+  src: url('./../assets/fonts/Poppins/Poppins-Medium.ttf');
 }
 
 .wrapper {
@@ -62,7 +62,7 @@ body {
   }
 
   .header-section {
-    background-image: url('./assets/pngs/header-shapes-mobile.png');
+    background-image: url('./../assets/pngs/header-shapes-mobile.png');
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,7 +72,7 @@ body {
   .toggler {
     display: flex;
     align-items: center;
-    background-image: url('./assets/pngs/Union.png');
+    background-image: url('./../assets/pngs/Union.png');
     width: 100px;
     background-repeat: no-repeat;
     background-position: center;
