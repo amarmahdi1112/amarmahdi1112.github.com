@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'Poppins-h2';
+  src: url('./assets/fonts/Poppins/Poppins-Medium.ttf');
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.header-section {
+  width: 100%;
+}
+
+.main-header {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+}
+
+.toggler {
+  display: none;
+  /* align-items: center; */
+}
+
+.logo {
+  color: #6070FF;
+  font-family: 'Poppins-h2';
+  font-size: 18;
+  font-weight: 700;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  padding: 24px;
+}
+
+@media (max-width: 540px) {
+  .main-header {
+    width: 100%;
+    flex-wrap: wrap;
+    /* border: 10px red solid; */
+    justify-content: space-between;
+    align-content: center;
+    height: 71px;
+  }
+
+  .header-section {
+    background-image: url('./assets/pngs/header-shapes-mobile.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .toggler {
+    display: flex;
+    align-items: center;
+    background-image: url('./assets/pngs/Union.png');
+    width: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .nav {
+    flex-direction: column;
+  }
+
+  .banner-header {
+    font-size: 40px;
+    line-height: 52px;
+    color: #172B4D;
+    font-family: 'Poppins-h2';
+  }
+
+  .banner-body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #172B4D;
+  }
+
+  .banner-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-footer a {
+    text-decoration: none;
+    color: #7F8CFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  
+  .banner-social {
+    display: flex;
+    width: 171px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+
+  .social {
+    width: 25px;
+    height: 25px;
+  }
+}
