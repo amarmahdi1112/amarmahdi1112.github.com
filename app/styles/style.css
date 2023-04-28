@@ -7,6 +7,7 @@ body {
   font-family: 'Poppins';
   src: url('./../assets/fonts/Poppins/Poppins-Regular.ttf');
 }
+
 @font-face {
   font-family: 'Poppins-h2';
   src: url('./../assets/fonts/Poppins/Poppins-Medium.ttf');
@@ -31,11 +32,10 @@ body {
 
 .toggler {
   display: none;
-  /* align-items: center; */
 }
 
 .logo {
-  color: #6070FF;
+  color: #6070ff;
   font-family: 'Poppins-h2';
   font-size: 18;
   font-weight: 700;
@@ -76,6 +76,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
+
   .nav {
     flex-direction: column;
   }
@@ -83,7 +84,7 @@ body {
   .banner-header {
     font-size: 40px;
     line-height: 52px;
-    color: #172B4D;
+    color: #172b4d;
     font-family: 'Poppins-h2';
   }
 
@@ -91,7 +92,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: #172B4D;
+    color: #172b4d;
   }
 
   .banner-footer {
@@ -101,7 +102,7 @@ body {
 
   .banner-footer a {
     text-decoration: none;
-    color: #7F8CFF;
+    color: #7f8Cff;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
