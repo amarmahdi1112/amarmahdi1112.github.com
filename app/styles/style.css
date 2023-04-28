@@ -1,17 +1,18 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 body {
   margin: 0;
   padding: 0;
 }
 
 @font-face {
-  font-family: Poppins;
+  font-family: 'Poppins';
   src: url(./../assets/fonts/Poppins/Poppins-Regular.ttf);
 }
 
-/* @font-face {
-  font-family: Poppins;
-  src: url('./../assets/fonts/Poppins/Poppins-Medium.ttf');
-} */
+@font-face {
+  font-family: PoppinsMedium;
+  src: url(./../assets/fonts/Poppins/Poppins-Medium.ttf);
+}
 
 .wrapper {
   display: flex;
@@ -36,7 +37,7 @@ body {
 
 .logo {
   color: #6070ff;
-  font-family: Poppins;
+  font-family: PoppinsMedium;
   font-size: 18;
   font-weight: 700;
   width: 100px;
@@ -85,7 +86,7 @@ body {
     font-size: 40px;
     line-height: 52px;
     color: #172b4d;
-    font-family: Poppins;
+    font-family: PoppinsMedium;
   }
 
   .banner-body {
