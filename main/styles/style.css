@@ -55,7 +55,6 @@ body {
   .main-header {
     width: 100%;
     flex-wrap: wrap;
-    /* border: 10px red solid; */
     justify-content: space-between;
     align-content: center;
     height: 71px;
