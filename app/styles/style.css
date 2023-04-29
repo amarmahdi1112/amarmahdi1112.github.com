@@ -260,6 +260,17 @@ body {
     font-family: Poppins;
   }
 
+  .show-button:hover {
+    background-color: #6070ff;
+    box-shadow: 0 8px 16px 0 rgba(64, 83, 252, 0.25);
+    color: #fff;
+  }
+
+  .show-button:active {
+    background-color: #2230d2;
+    color: #fff;
+  }
+
   .about-section {
     display: flex;
     flex-direction: column;
@@ -343,6 +354,14 @@ body {
     font-size: 15px;
     font-family: Poppins;
     color: #253858;
+  }
+
+  .about-body h2 {
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+    font-weight: 400;
+    color: #344563;
   }
 
   .divide {
