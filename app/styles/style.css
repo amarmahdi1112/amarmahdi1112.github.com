@@ -29,7 +29,7 @@ body {
 .header-section {
   width: 100%;
   background-color: #fff;
-  border-radius: 0 0 0 15%;
+  border-radius: 0 0 0 94px;
 }
 
 .main-header {
@@ -140,6 +140,10 @@ body {
 
   .jobs {
     padding: 24px;
+    display: grid;
+    grid-column: auto;
+    gap: 88px;
+    margin-top: 88px;
   }
 
   .card {
@@ -152,7 +156,6 @@ body {
     background-color: #fff;
     border-radius: 16px;
     border: 1px #dfe1e6 solid;
-    margin-top: 114px;
   }
 
   .card-container {
@@ -276,14 +279,14 @@ body {
     flex-direction: column;
     margin-top: 114px;
     background-color: #fff;
-    border-radius: 0 15% 0 0;
+    border-radius: 0 94px 0 0;
     padding: 24px;
   }
 
   .about-title {
     font-family: PoppinsBold;
     color: #172b4d;
-    font-size: 24px;
+    font-size: 40px;
     line-height: 52px;
   }
 
@@ -292,8 +295,12 @@ body {
     margin-top: 90px;
   }
 
-  .about-social a {
+  .about-social h2 a {
     font-family: Poppins;
+  }
+
+  .about-social h2 {
+    margin: 0;
   }
 
   .about-social .banner-social img {
@@ -356,7 +363,7 @@ body {
     color: #253858;
   }
 
-  .about-body h2 {
+  .about-body {
     font-size: 16px;
     font-family: Poppins;
     line-height: 24px;
