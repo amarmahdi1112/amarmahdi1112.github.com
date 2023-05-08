@@ -231,10 +231,11 @@ body {
   }
 
   .stack-section {
-    display: flex;
+    padding-bottom: 10px;
   }
 
   .stack-container {
+    float: left;
     padding-right: 8px;
   }
 
