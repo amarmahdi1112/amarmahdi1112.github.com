@@ -385,7 +385,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #6070ff;
-    border-radius: 15% 0 0 0;
+    border-radius: 94px 0 0 0;
     height: 790px;
     margin-top: 114px;
     display: flex;
@@ -394,7 +394,7 @@ body {
     text-align: center;
   }
 
-  .contact-title h1 {
+  .contact-title h2 {
     margin: 0;
     margin-top: 114px;
     color: #fff;
@@ -424,10 +424,13 @@ body {
   .input-field {
     width: 100%;
     border-radius: 8px;
+    border: none;
+    height: 48px;
   }
 
   .text-field {
     height: 48px;
-    border: none;
+    border-radius: 8px;
+    border: 0 solid;
   }
 }
