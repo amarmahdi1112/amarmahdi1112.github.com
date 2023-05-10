@@ -10,7 +10,7 @@
   - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
-- [👥 Author](#authors)
+- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [📝 License](#license)
 
@@ -71,9 +71,16 @@ To run the project:
 
 ## Author <a name="authors"></a>
 
-Amar Muha
+👤 **Amar Muha**
+
 - GitHub: [@amarmahdi1112](https://github.com/amarmahdi1112)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/amar-muha-698080178)
+- LinkedIn: [Amar Muha](https://linkedin.com/in/amar-muha-698080178)
+
+
+👤 **Wilfred Muyisa**
+
+- GitHub: [@WilfriedM01](https://github.com/WilfriedM01)
+- LinkedIn: [Wilfried Muyisa](https://www.linkedin.com/in/wilfried-muyisa-7820b6193/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,6 +97,17 @@ Amar Muha
 > Contributions and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> Give credit to everyone who inspired your codebase.
+
+I would like to thank Wilfried for helping me with implementing the designs.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- SUPPORT -->
 
