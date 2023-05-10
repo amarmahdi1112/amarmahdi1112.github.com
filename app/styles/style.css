@@ -76,7 +76,7 @@ body {
   .toggler {
     display: flex;
     align-items: center;
-    background-image: url('./../assets/pngs/icons/Union.png');
+    background-image: url("./../assets/pngs/icons/Union.png");
     width: 100px;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,7 +87,7 @@ body {
   }
 
   .header-section {
-    background-image: url('./../assets/pngs/icons/header-shapes-mobile.png');
+    background-image: url("./../assets/pngs/icons/header-shapes-mobile.png");
     height: 718px;
     width: 100%;
     background-repeat: no-repeat;
@@ -381,7 +381,7 @@ body {
   }
 
   .contact-container {
-    background-image: url('./../assets/pngs/icons/contactBg.png');
+    background-image: url("./../assets/pngs/icons/contactBg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #6070ff;
@@ -426,11 +426,16 @@ body {
     border-radius: 8px;
     border: none;
     height: 48px;
+    padding-left: 20px;
   }
 
   .text-field {
     height: 48px;
     border-radius: 8px;
     border: 0 solid;
+    width: 100%;
+    height: 170px;
+    padding-left: 20px;
+    padding-top: 20px;
   }
 }
