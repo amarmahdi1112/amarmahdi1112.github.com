@@ -46,7 +46,6 @@ body {
 }
 
 .logo {
-  width: 100px;
   display: flex;
   justify-content: center;
 }
@@ -93,10 +92,6 @@ body {
 }
 
 .banner-container {
-  background-image: url("./../assets/pngs/icons/Headerbg.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   font-family: Poppins;
@@ -104,6 +99,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 720px;
+}
+
+.banner-background {
+  background-image: url("./../assets/pngs/icons/Headerbg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .banner {
@@ -118,11 +120,18 @@ body {
   letter-spacing: 0.37px;
 }
 
+.banner-header h1 {
+  margin: 0;
+  margin-top: 24px;
+}
+
 .banner-body p {
   font-family: Poppins;
   font-size: 20px;
   line-height: 28px;
   color: #344563;
+  margin: 0;
+  margin-top: 12px;
 }
 
 .banner-footer {
@@ -155,7 +164,7 @@ body {
 
 /* job section design starts here */
 .jobs {
-  padding: 24px;
+  /* padding: 24px; */
   display: grid;
   margin-top: 88px;
   gap: 88px;
@@ -191,6 +200,8 @@ body {
 
 .card-img {
   width: 50%;
+  height: 100%;
+  align-self: center;
 }
 
 .card-title-text {
@@ -523,30 +534,53 @@ body {
 }
 
 @media (max-width: 720px) {
+  .main-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    height: 48px;
+  }
+
   .toggler {
     display: flex;
     align-items: center;
     background-image: url("./../assets/pngs/icons/Union.png");
-    width: 100px;
+    width: 18px;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .nav {
-    flex-direction: column;
+    display: none;
   }
 
-  .header-section {
-    height: 718px;
-    width: 100%;
+  .banner {
+    width: 80%;
+  }
+
+  .banner-section {
+    height: 652px;
   }
 
   .banner-header {
     font-size: 38px;
     line-height: 52px;
     color: #172b4d;
-    font-family: Poppins;
+    font-family: PoppinsBold;
     max-height: 200px;
+  }
+
+  .banner-container {
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .banner-background {
+    background-image: url("./../assets/pngs/icons/header-shapes-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .banner-body {
@@ -556,17 +590,63 @@ body {
     color: #172b4d;
   }
 
+  .banner-body p {
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 24px;
+    color: #344563;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .banner-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-footer a {
+    text-decoration: none;
+    color: #7f8cff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .banner-social {
+    display: flex;
+    width: 171px;
+    justify-content: space-between;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .banner-social .social {
+    text-decoration: none;
+    display: flex;
+  }
+
   .jobs {
-    padding: 24px;
+    /* padding: 24px; */
     display: grid;
     grid-column: auto;
     gap: 88px;
     margin-top: 88px;
   }
 
+  .reversed {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+
   .card-content {
     width: 100%;
-    padding: 0;
   }
 
   .card {
@@ -587,6 +667,8 @@ body {
 
   .card .card-img {
     width: 100%;
+    height: auto;
+    align-self: flex-start;
   }
 
   .card-title-text {
@@ -604,6 +686,7 @@ body {
     font-size: 24px;
     line-height: 44px;
     font-weight: 700;
+    margin-bottom: 0;
   }
 
   .card-subtitle {
@@ -613,6 +696,7 @@ body {
     align-items: center;
     width: 236px;
     font-family: Poppins;
+    margin-bottom: 12px;
   }
 
   .el1 {
@@ -645,16 +729,18 @@ body {
     margin-top: 4px;
   }
 
-  .card-description {
+  .card-description p {
     font-family: Poppins;
     color: #344563;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
+    margin-top: 5px;
   }
 
   .stack-section {
-    padding-bottom: 10px;
+    margin-top: 24px;
+    padding-bottom: 24px;
   }
 
   .stack-container {
@@ -704,17 +790,13 @@ body {
     margin-top: 114px;
     background-color: #fff;
     border-radius: 0 94px 0 0;
-    padding: 24px;
   }
 
-  .about-title {
+  .about-title h1 {
     font-family: PoppinsBold;
     color: #172b4d;
     font-size: 40px;
     line-height: 52px;
-  }
-
-  .about-title h1 {
     margin: 0;
     margin-top: 90px;
   }
@@ -733,13 +815,18 @@ body {
   }
 
   .about-resume {
-    padding-top: 22px;
+    padding-top: 34px;
+  }
+
+  .about-social {
+    padding: 0;
   }
 
   .about-categories {
     display: flex;
     flex-direction: column;
-    margin-top: 36px;
+    margin-top: 4px;
+    width: 100%;
   }
 
   .section-title {
@@ -762,16 +849,21 @@ body {
 
   .categories {
     margin: 0;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   .category-item {
     background-color: #f4f5f7;
     border-radius: 8px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    margin: 0;
     margin-bottom: 12px;
-    padding: 10px;
+    padding: 0;
+    width: 100%;
+    height: 66px;
   }
 
   .category-img .cat-img {
@@ -785,6 +877,18 @@ body {
     font-size: 15px;
     font-family: Poppins;
     color: #253858;
+    padding: 0;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    width: 80%;
+  }
+
+  .about-contents {
+    width: 100%;
   }
 
   .about-body {
@@ -816,9 +920,12 @@ body {
     text-align: center;
   }
 
+  .contact-contents {
+    width: 100%;
+  }
+
   .contact-title h2 {
     margin: 0;
-    margin-top: 114px;
     color: #fff;
     font-family: PoppinsBold;
     font-size: 40px;
