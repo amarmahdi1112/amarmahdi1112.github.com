@@ -178,7 +178,6 @@ body {
   background-color: #fff;
   border-radius: 16px;
   border: 1px #dfe1e6 solid;
-
 }
 
 .card:hover {
@@ -524,9 +523,10 @@ body {
 }
 
 .button-container {
+  padding-left: 8px;
   padding-bottom: 70px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
