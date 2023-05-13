@@ -23,10 +23,14 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   background-color: #fff;
   border-radius: 0 0 0 94px;
@@ -34,14 +38,14 @@ body {
 
 .main-header {
   display: flex;
-}
-
-.nav {
-  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  height: 71px;
+  width: 80%;
 }
 
 .logo {
-  width: 100px;
   display: flex;
   justify-content: center;
 }
@@ -54,53 +58,530 @@ body {
   font-weight: 700;
 }
 
-.banner {
+/* navigation section design starts here */
+.nav {
+  width: 80%;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  padding-right: 20px;
+  padding-left: 20px;
+  display: block;
+}
+
+.nav > ul > li > a {
+  text-decoration: none;
+  color: #344563;
+  font-family: Poppins;
+}
+
+/* banner section design starts here */
+.banner-section {
+  width: 100%;
+  height: 846px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-container {
   display: flex;
   flex-direction: column;
   font-family: Poppins;
   padding: 24px;
-  width: 80%;
-  justify-content: flex-start;
-  height: 604px;
+  justify-content: center;
+  align-items: center;
+  height: 720px;
 }
 
-@media (max-width: 540px) {
+.banner-background {
+  background-image: url("./../assets/pngs/icons/Headerbg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.banner {
+  width: 70%;
+}
+
+.banner-header {
+  font-family: PoppinsBold;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.37px;
+}
+
+.banner-header h1 {
+  margin: 0;
+  margin-top: 24px;
+}
+
+.banner-body p {
+  font-family: Poppins;
+  font-size: 20px;
+  line-height: 28px;
+  color: #344563;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.banner-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: #7f8cff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  font-family: PoppinsMedium;
+}
+
+.banner-social {
+  display: flex;
+  width: 171px;
+  justify-content: space-between;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.banner-social .social {
+  text-decoration: none;
+  display: flex;
+}
+
+/* job section design starts here */
+.jobs {
+  /* padding: 24px; */
+  display: grid;
+  margin-top: 88px;
+  gap: 88px;
+  width: 80%;
+}
+
+.card {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px #dfe1e6 solid;
+}
+
+.card:hover {
+  box-shadow: 0 4px 48px rgba(37, 47, 137, 0.08);
+}
+
+.card-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.container {
+  padding: 24px;
+}
+
+.card-content {
+  width: 50%;
+}
+
+.card-img {
+  width: 50%;
+  height: 100%;
+  align-self: center;
+}
+
+.card-title-text {
+  margin: 0;
+  margin-top: 16px;
+}
+
+.job-img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.card-title {
+  font-family: PoppinsBold;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.card-subtitle {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  align-items: center;
+  width: 296px;
+  font-family: Poppins;
+  margin-bottom: 20px;
+}
+
+.el1 {
+  color: #344563;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.el2 {
+  color: #7a869a;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.dividor {
+  background-color: #c1c7d0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.card-body {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-description p {
+  font-family: Poppins;
+  color: #344563;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.stack-section {
+  padding-bottom: 10px;
+  margin-top: 34px;
+}
+
+.stack-container {
+  float: left;
+  padding-right: 8px;
+}
+
+.tech-stack {
+  color: #6070ff;
+  background-color: #ebebff;
+  font-family: Poppins;
+  height: 24px;
+  padding: 6px 12px 6px 12px;
+  font-size: 12px;
+  align-content: center;
+  border-radius: 8px;
+}
+
+.card-footer {
+  margin-top: 68px;
+  padding-bottom: 16px;
+}
+
+.show-button {
+  padding: 12px;
+  text-decoration: none;
+  border: 1px #6070ff solid;
+  border-radius: 8px;
+  color: #6070ff;
+  font-family: Poppins;
+}
+
+.show-button:hover {
+  background-color: #6070ff;
+  box-shadow: 0 8px 16px 0 rgba(64, 83, 252, 0.25);
+  color: #fff;
+}
+
+.show-button:active {
+  background-color: #2230d2;
+  color: #fff;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+  padding-right: 0;
+}
+
+/* about section design starts here */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 114px;
+  background-color: #fff;
+  border-radius: 0 94px 0 0;
+  width: 100%;
+}
+
+.about-container {
+  width: 80%;
+  display: flex;
+}
+
+.about-contents {
+  width: 50%;
+}
+
+.about-title {
+  font-family: PoppinsBold;
+  color: #172b4d;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.about-title h1 {
+  margin: 0;
+  margin-top: 90px;
+}
+
+.about-link {
+  font-family: Poppins;
+  color: #7f8cff;
+  text-decoration: none;
+}
+
+.about-social h2 {
+  margin: 0;
+}
+
+.about-social .banner-social img {
+  padding: 8px;
+  width: 18px;
+  margin-top: 18px;
+}
+
+.about-resume {
+  padding-top: 56px;
+}
+
+.about-categories {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+  width: 50%;
+  padding: 20px;
+  padding-left: 0;
+}
+
+.section-title {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins;
+}
+
+.title-text {
+  font-size: 20px;
+}
+
+.dropdown-icon {
+  width: 50px;
+}
+
+.categories {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+}
+
+.category-item {
+  background-color: #f4f5f7;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 10px;
+  margin-bottom: 12px;
+  padding: 10px;
+  width: 122px;
+  height: 120px;
+}
+
+.category-img .cat-img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+}
+
+.cat-name {
+  margin-left: 10px;
+  font-size: 15px;
+  font-family: PoppinsMedium;
+  font-weight: 400;
+  color: #253858;
+  padding-top: 10px;
+}
+
+.about-body {
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: 24px;
+  font-weight: 400;
+  color: #344563;
+  padding-right: 24px;
+}
+
+.divide {
+  border: 1px #dfe1e6 solid;
+}
+
+/* contact section design starts here */
+.contact-section {
+  background-color: #fff;
+  width: 100%;
+}
+
+.contact-container {
+  background-image: url("./../assets/pngs/icons/contactBgDesktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #6070ff;
+  border-radius: 94px 0 0 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 88px;
+  width: 100%;
+}
+
+.contact-contents {
+  margin-top: 114px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.contact-title h2 {
+  margin: 0;
+  margin-top: 114px;
+  color: #fff;
+  font-family: PoppinsBold;
+  font-size: 40px;
+}
+
+.contact-body {
+  width: 70%;
+}
+
+.contact-body p {
+  color: #fff;
+  font-size: 20px;
+  font-family: Poppins;
+  line-height: 28px;
+}
+
+.form-container {
+  width: 80%;
+}
+
+.input-container {
+  padding: 10px;
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  height: 48px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-radius: none;
+  border: 3px red solid;
+}
+
+.text-field {
+  border-radius: 8px;
+  border: 0 solid;
+  height: 170px;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.button-container {
+  padding-left: 8px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-btn {
+  background-color: #fff;
+}
+
+@media (max-width: 720px) {
   .main-header {
-    width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    height: 71px;
+    height: 48px;
   }
 
   .toggler {
     display: flex;
     align-items: center;
     background-image: url("./../assets/pngs/icons/Union.png");
-    width: 100px;
+    width: 18px;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .nav {
-    flex-direction: column;
+    display: none;
   }
 
-  .header-section {
-    background-image: url("./../assets/pngs/icons/header-shapes-mobile.png");
-    height: 718px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  .banner {
+    width: 80%;
+  }
+
+  .banner-section {
+    height: 652px;
   }
 
   .banner-header {
     font-size: 38px;
     line-height: 52px;
     color: #172b4d;
-    font-family: Poppins;
+    font-family: PoppinsBold;
     max-height: 200px;
+  }
+
+  .banner-container {
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .banner-background {
+    background-image: url("./../assets/pngs/icons/header-shapes-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .banner-body {
@@ -108,6 +589,16 @@ body {
     font-weight: 400;
     line-height: 24px;
     color: #172b4d;
+  }
+
+  .banner-body p {
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 24px;
+    color: #344563;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 
   .banner-footer {
@@ -139,11 +630,24 @@ body {
   }
 
   .jobs {
-    padding: 24px;
+    /* padding: 24px; */
     display: grid;
     grid-column: auto;
     gap: 88px;
     margin-top: 88px;
+  }
+
+  .reversed {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .card-content {
+    width: 100%;
   }
 
   .card {
@@ -164,6 +668,8 @@ body {
 
   .card .card-img {
     width: 100%;
+    height: auto;
+    align-self: flex-start;
   }
 
   .card-title-text {
@@ -181,6 +687,7 @@ body {
     font-size: 24px;
     line-height: 44px;
     font-weight: 700;
+    margin-bottom: 0;
   }
 
   .card-subtitle {
@@ -190,6 +697,7 @@ body {
     align-items: center;
     width: 236px;
     font-family: Poppins;
+    margin-bottom: 12px;
   }
 
   .el1 {
@@ -222,16 +730,18 @@ body {
     margin-top: 4px;
   }
 
-  .card-description {
+  .card-description p {
     font-family: Poppins;
     color: #344563;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
+    margin-top: 5px;
   }
 
   .stack-section {
-    padding-bottom: 10px;
+    margin-top: 24px;
+    padding-bottom: 24px;
   }
 
   .stack-container {
@@ -281,17 +791,13 @@ body {
     margin-top: 114px;
     background-color: #fff;
     border-radius: 0 94px 0 0;
-    padding: 24px;
   }
 
-  .about-title {
+  .about-title h1 {
     font-family: PoppinsBold;
     color: #172b4d;
     font-size: 40px;
     line-height: 52px;
-  }
-
-  .about-title h1 {
     margin: 0;
     margin-top: 90px;
   }
@@ -310,13 +816,18 @@ body {
   }
 
   .about-resume {
-    padding-top: 22px;
+    padding-top: 34px;
+  }
+
+  .about-social {
+    padding: 0;
   }
 
   .about-categories {
     display: flex;
     flex-direction: column;
-    margin-top: 36px;
+    margin-top: 4px;
+    width: 100%;
   }
 
   .section-title {
@@ -339,16 +850,21 @@ body {
 
   .categories {
     margin: 0;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   .category-item {
     background-color: #f4f5f7;
     border-radius: 8px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    margin: 0;
     margin-bottom: 12px;
-    padding: 10px;
+    padding: 0;
+    width: 100%;
+    height: 66px;
   }
 
   .category-img .cat-img {
@@ -362,6 +878,18 @@ body {
     font-size: 15px;
     font-family: Poppins;
     color: #253858;
+    padding: 0;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    width: 80%;
+  }
+
+  .about-contents {
+    width: 100%;
   }
 
   .about-body {
@@ -393,9 +921,12 @@ body {
     text-align: center;
   }
 
+  .contact-contents {
+    width: 100%;
+  }
+
   .contact-title h2 {
     margin: 0;
-    margin-top: 114px;
     color: #fff;
     font-family: PoppinsBold;
     font-size: 40px;
