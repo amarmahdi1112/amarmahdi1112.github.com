@@ -182,6 +182,7 @@ body {
 
 .card:hover {
   box-shadow: 0 4px 48px rgba(37, 47, 137, 0.08);
+  transition: all 0.5s ease-in-out;
 }
 
 .card-container {
