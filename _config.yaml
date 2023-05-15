@@ -1,6 +1,6 @@
 lsi: false
 safe: true
-source: /app
+source: "./app/index.html"
 incremental: false
 highlighter: rouge
 gist:
