@@ -1,6 +1,6 @@
 lsi: false
 safe: true
-source: ./app
+source: /app
 incremental: false
 highlighter: rouge
 gist:
