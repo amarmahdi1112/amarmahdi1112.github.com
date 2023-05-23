@@ -60,7 +60,7 @@ body {
 
 /* navigation section design starts here */
 .nav {
-  width: 80%;
+  position: relative;
 }
 
 .nav ul {
@@ -549,12 +549,29 @@ body {
     align-items: center;
     background-image: url("./../assets/pngs/icons/Union.png");
     width: 18px;
+    height: 70px;
+    position: absolute;
+    top: 0;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  .nav {
+  .nav-hide {
     display: none;
+
+  }
+
+  .nav-show {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+  }
+
+  .nav-show ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
   }
 
   .banner {
