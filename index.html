@@ -13,20 +13,22 @@
   <div class="wrapper">
     <!-- Header section starts here -->
     <section class="header-section">
+      <div class="background-blur-menu overlay-hide" id="overlay"></div>
       <header class="main-header">
         <div class="logo">
           <a href="#">Amar</a>
         </div>
-        <div class="nav">
-          <div class="toggler" id="toggler"></div>
-          <nav class="nav-show">
-            <ul>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+        <div class="toggler" id="toggler"></div>
+        <nav class="nav nav-hide" id="show-nav">
+          <div class="nav-close" id="close">
+            <img src="./app/assets/pngs/icons/close.png" alt="" srcset="">
+          </div>
+          <ul class="menu">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
       </header>
       <section class="banner-section">
         <div class="banner-container banner-background">
@@ -285,7 +287,7 @@
           </div>
           <div class="card-description about-body">
             <p>
-              Hello I'm a software developer! 
+              Hello I'm a software developer!
               I can help you build a product,
               feature or website. Look through some of my work and experience! If
               you like what you see and have a project you need coded don't
@@ -401,5 +403,5 @@
     <!-- contact section ends here -->
   </div>
 </body>
-
+<script src="./app/scripts/main.js"></script>
 </html>

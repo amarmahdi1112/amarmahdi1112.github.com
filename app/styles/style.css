@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 /* stylelint-disable font-family-no-missing-generic-family-keyword */
 body {
   margin: 0;
@@ -45,6 +46,13 @@ body {
   width: 80%;
 }
 
+/* .navbar-menu {
+} */
+
+.toggler {
+  display: none;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -59,10 +67,6 @@ body {
 }
 
 /* navigation section design starts here */
-.nav {
-  position: relative;
-}
-
 .nav ul {
   display: flex;
   justify-content: flex-end;
@@ -549,29 +553,95 @@ body {
     align-items: center;
     background-image: url("./../assets/pngs/icons/Union.png");
     width: 18px;
-    height: 70px;
-    position: absolute;
     top: 0;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .nav-hide {
-    display: none;
+    width: 0;
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.5s;
+    height: 100vh;
+    z-index: 100;
+    background-color: #6070ff;
+    left: 0;
+    top: 0;
+  }
 
+  .overlay-hide {
+    width: 0;
+  }
+
+  .overlay-show {
+    width: 100%;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 76px;
+    color: #fff;
+  }
+
+  .nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    font-family: Poppins;
+    font-weight: 600;
   }
 
   .nav-show {
     display: flex;
     width: 100%;
-    position: relative;
-
+    background: rgba(96, 112, 255, 1);
+    mix-blend-mode: multiply;
   }
 
-  .nav-show ul {
+  .background-blur-menu {
+    background: rgba(96, 112, 255, 0.01);
+    position: fixed;
+    height: 100vh;
+    filter: blur(10px);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    transform: 0.5s;
+  }
+
+  .menu {
+    margin-top: 76px;
     display: flex;
     flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    font-family: Poppins;
+    font-weight: 600;
+  }
+
+  .nav-close {
+    right: 22px;
+    top: 30px;
+    color: white;
     position: absolute;
+    font-size: 18px;
+    font-family: PoppinsLight;
+  }
+
+  .menu li {
+    padding: 20px;
+    padding-left: 0;
+    display: block;
   }
 
   .banner {
