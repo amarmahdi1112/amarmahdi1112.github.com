@@ -32,7 +32,9 @@ const data = [
     "image": `${sourcePath(url)}/app/assets/pngs/jobs/job1.png`,
     "description": "A daily selection of privately personalized reads; no accounts or sign-ups required.",
     "techStack": ["htmls", "css", "javaScript"],
-    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s."
+    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
+    "github_link": "https://github.com/amarmahdi1112",
+    "website": "https://amarmahdi1112.github.io/"
   },
   {
     "id": "2",
@@ -45,7 +47,9 @@ const data = [
     "image": `${sourcePath(url)}/app/assets/pngs/jobs/job2.png`,
     "description": "A daily selection of privately personalized reads; no accounts or sign-ups required.",
     "techStack": ["htmls", "css", "javaScript"],
-    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s."
+    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
+    "github_link": "https://github.com/amarmahdi1112",
+    "website": "https://amarmahdi1112.github.io/"
   },
   {
     "id": "3",
@@ -58,7 +62,9 @@ const data = [
     "image": `${sourcePath(url)}/app/assets/pngs/jobs/job3.png`,
     "description": "A daily selection of privately personalized reads; no accounts or sign-ups required.",
     "techStack": ["htmls", "css", "javaScript"],
-    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s."
+    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
+    "github_link": "https://github.com/amarmahdi1112",
+    "website": "https://amarmahdi1112.github.io/"
   },
   {
     "id": "4",
@@ -71,7 +77,9 @@ const data = [
     "image": `${sourcePath(url)}/app/assets/pngs/jobs/job4.png`,
     "description": "A daily selection of privately personalized reads; no accounts or sign-ups required.",
     "techStack": ["htmls", "css", "javaScript"],
-    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s."
+    "full_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
+    "github_link": "https://github.com/amarmahdi1112",
+    "website": "https://amarmahdi1112.github.io/"
   }
 ];
 
@@ -121,6 +129,8 @@ data.forEach((element, index) => {
   let desc = newElement.querySelector('[id=description]');
   let techStackContainer = newElement.querySelector('[id=tech-stack-container]')
   let detailLink = newElement.querySelector('[id=detail-link]')
+  let website = newElement.querySelector('[id=website]')
+  let githublink = newElement.querySelector('[id=github-link]')
 
   if (index % 2 !== 0) {
     container.classList.add('reversed');
@@ -132,6 +142,9 @@ data.forEach((element, index) => {
   jobTitle.innerText = element.subtitle.position;
   year.innerText = element.subtitle.year;
   desc.innerText = element.description;
+  githublink.setAttribute('href', element.github_link);
+  website.setAttribute('href', element.website);
+
   detailLink.addEventListener('click', () => {
     showModal(index, true);
   });
