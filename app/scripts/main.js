@@ -3,25 +3,29 @@ const closeNav = document.getElementById('close');
 const links = document.getElementsByClassName('links');
 const nav = document.getElementById('show-nav');
 const overlay = document.getElementById('overlay');
+let closeModal = document.querySelector('[id=close-modal]')
 
-const tgl = (show) => {
-  if (show) {
-    overlay.classList.remove('overlay-hide');
-    overlay.classList.add('overlay-show');
-    nav.classList.toggle('nav-show');
-  } else {
-    overlay.classList.add('overlay-hide');
-    overlay.classList.remove('overlay-show');
-    nav.classList.remove('nav-show');
-  }
+const showOverlay = () => {
+  overlay.classList.toggle('overlay-show');
 };
 
+const showNav = () => {
+  nav.classList.toggle('nav-show');
+};
+
+closeModal.addEventListener('click', (e) => {
+  e.preventDefault();
+  showModal();
+});
+
 toggler.addEventListener('click', () => {
-  tgl(true);
+  showOverlay();
+  showNav();
 });
 
 closeNav.addEventListener('click', () => {
-  tgl(false);
+  showOverlay();
+  showNav();
 });
 
 Array.from(links).forEach((element) => {
