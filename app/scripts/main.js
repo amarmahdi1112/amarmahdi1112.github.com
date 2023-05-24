@@ -1,6 +1,6 @@
 const toggler = document.getElementById('toggler');
 const closeNav = document.getElementById('close');
-const links = document.getElementsByClassName('links')
+const links = document.getElementsByClassName('links');
 const nav = document.getElementById('show-nav');
 const overlay = document.getElementById('overlay');
 
@@ -14,7 +14,7 @@ const tgl = (show) => {
     overlay.classList.remove('overlay-show');
     nav.classList.remove('nav-show');
   }
-}
+};
 
 toggler.addEventListener('click', () => {
   tgl(true);
@@ -24,7 +24,7 @@ closeNav.addEventListener('click', () => {
   tgl(false);
 });
 
-Array.from(links).forEach(element => {
+Array.from(links).forEach((element) => {
   element.addEventListener('click', () => {
     tgl(false);
   });
