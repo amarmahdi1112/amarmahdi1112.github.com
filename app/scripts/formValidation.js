@@ -54,9 +54,8 @@ contact.addEventListener('submit', (e) => {
         'Content-Type': 'application/json',
       },
     }).then(async (response) => {
-      console.log(await response.json())
       if (response.ok) {
-        return response.json();
+        return await response.json();
       }
       throw new Error('Response error!');
     }).then((json) => {
