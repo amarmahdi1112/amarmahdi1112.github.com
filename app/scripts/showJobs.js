@@ -13,13 +13,6 @@ const sourcePath = (url) => {
   return joined
 }
 
-const getId = (url) => {
-  let strArr = url.toString().split('#')
-  return strArr[strArr.length - 1];
-}
-
-fetch("./jobsList.json").then(({data})=>console.log(data))
-
 const data = [
   {
     "id": "1",
@@ -92,7 +85,9 @@ const showModal = (id, show = false) => {
   let company = modalElement.querySelector('[id=company]');
   let jobTitle = modalElement.querySelector('[id=job-title]');
   let year = modalElement.querySelector('[id=year]');
-  
+  let website = modalElement.querySelector('[id=website]')
+  let githublink = modalElement.querySelector('a#github-link')
+
   if (show) {
     title.innerText = content.title;
     img.src = content.image;
@@ -100,6 +95,10 @@ const showModal = (id, show = false) => {
     company.innerText = content.subtitle.jobtitle;
     jobTitle.innerText = content.subtitle.position;
     year.innerText = content.subtitle.year;
+    githublink.setAttribute('href', content.github_link);
+    githublink.setAttribute('target', '_blank');
+    website.setAttribute('href', content.website);
+    website.setAttribute('target', '_blank');
 
     content.techStack.forEach((ts) => {
       const newTSnode = techStack.cloneNode(true);
@@ -127,11 +126,8 @@ data.forEach((element, index) => {
   let jobTitle = newElement.querySelector('[id=job-title]');
   let year = newElement.querySelector('[id=year]');
   let desc = newElement.querySelector('[id=description]');
-  let techStackContainer = newElement.querySelector('[id=tech-stack-container]')
-  let detailLink = newElement.querySelector('[id=detail-link]')
-  let website = newElement.querySelector('[id=website]')
-  let githublink = newElement.querySelector('[id=github-link]')
-
+  let techStackContainer = newElement.querySelector('[id=tech-stack-container]');
+  let detailLink = newElement.querySelector('[id=detail-link]');
   if (index % 2 !== 0) {
     container.classList.add('reversed');
   }
@@ -142,9 +138,6 @@ data.forEach((element, index) => {
   jobTitle.innerText = element.subtitle.position;
   year.innerText = element.subtitle.year;
   desc.innerText = element.description;
-  githublink.setAttribute('href', element.github_link);
-  website.setAttribute('href', element.website);
-
   detailLink.addEventListener('click', () => {
     showModal(index, true);
   });
@@ -155,6 +148,5 @@ data.forEach((element, index) => {
     tsTitle.innerText = ts;
     techStackContainer.appendChild(newTSnode);
   });
-
   portfolioSection.appendChild(newElement)
 });
