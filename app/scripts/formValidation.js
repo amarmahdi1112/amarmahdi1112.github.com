@@ -35,7 +35,6 @@ fullnameField.addEventListener('change', (e) => {
 messageField.addEventListener('change', (e) => {
   info.message = e.target.value;
   storeData(info);
-  console.log(localStorage)
 });
 
 const storeData = (info) => {
