@@ -10,7 +10,6 @@ contact.addEventListener('submit', (e) => {
 	const email = elements[1].value;
 	const message = elements[2].value;
 	const fullnameCount = fullname.split(' ').length;
-
 	if (fullnameCount < 2) {
 		fullnameErr.innerText = 'Please provide your full name!';
 	} else {
