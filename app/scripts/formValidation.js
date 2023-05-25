@@ -3,6 +3,20 @@ const fullnameErr = document.querySelector('#fullname-err');
 const emailErr = document.querySelector('#email-err');
 const msgErr = document.querySelector('#msg-err');
 const successMsg = document.querySelector('#success-message');
+const fullnameField = document.getElementById('fullname');
+const emailField = document.getElementById('email');
+const messageField = document.getElementById('message');
+
+window.onload = () => {
+  const storedFullname = localStorage.getItem('fullname');
+  const storedEmail = localStorage.getItem('email');
+  const storedMessage = localStorage.getItem('message');
+  if (storedFullname.length !== 0 || storedEmail.length !== 0 || storedMessage.length !== 0) {
+    emailField.value = storedEmail;
+    fullnameField.value = storedFullname;
+    messageField.value = storedMessage;
+  }
+}
 
 contact.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -39,7 +53,8 @@ contact.addEventListener('submit', (e) => {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((response) => {
+    }).then(async (response) => {
+      console.log(await response.json())
       if (response.ok) {
         return response.json();
       }
@@ -47,9 +62,10 @@ contact.addEventListener('submit', (e) => {
     }).then((json) => {
       if (json.ok) {
         successMsg.classList.remove('invisible');
-        elements[0].value = '';
-        elements[1].value = '';
-        elements[2].value = '';
+        localStorage.clear();
+        localStorage.setItem('fullname', fullname);
+        localStorage.setItem('email', email);
+        localStorage.setItem('message', message);
       }
     }).catch((error) => {
       console.log(error);
