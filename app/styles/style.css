@@ -1325,7 +1325,19 @@ body {
   }
 
   .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
     padding: 10px;
+  }
+
+  .input-container small {
+    font-family: Poppins;
+    font-size: 12px;
+    line-height: 16px;
+    color: #dd3b3b;
+    margin-top: 8px;
   }
 
   .input-field {
