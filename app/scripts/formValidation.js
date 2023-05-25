@@ -55,7 +55,7 @@ contact.addEventListener('submit', (e) => {
       },
     }).then(async (response) => {
       if (response.ok) {
-        let data = await response.json();
+        const data = await response.json();
         return data;
       }
       throw new Error('Response error!');
@@ -67,7 +67,6 @@ contact.addEventListener('submit', (e) => {
         localStorage.setItem('email', email);
         localStorage.setItem('message', message);
       }
-    }).catch((error) => {
     });
   }
 });
