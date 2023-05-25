@@ -1,57 +1,17 @@
 const jobElement = document.getElementById('job-element');
 const portfolioSection = document.getElementById('portfolio');
 const modalElement = document.getElementById('job-detail-element');
-const closeModal = document.querySelector('[id=close-modal]');
 const techStack = document.querySelector('[id=tech-stack]');
 
 const url = document.location;
 
 const sourcePath = (url) => {
-  let str = url.toString();
-  let strArr = str.split('/');
+  const str = url.toString();
+  const strArr = str.split('/');
   strArr.pop();
-  let joined = strArr.join('/');
+  const joined = strArr.join('/');
   return joined;
 };
-
-fetch(sourcePath(url) + '/app/scripts/jobsList.json')
-  .then((e) => {
-    e.json().then(({data})=> {
-      data.forEach((element, index) => {
-        const newElement = jobElement.cloneNode(true)
-        const container = newElement.querySelector('[id=container]');
-        const img = newElement.querySelector('[id=job-img]');
-        const title = newElement.querySelector('[id=title]');
-        const company = newElement.querySelector('[id=company]');
-        const jobTitle = newElement.querySelector('[id=job-title]');
-        const year = newElement.querySelector('[id=year]');
-        const desc = newElement.querySelector('[id=description]');
-        const techStackContainer = newElement.querySelector('[id=tech-stack-container]');
-        const detailLink = newElement.querySelector('[id=detail-link]');
-        if (index % 2 !== 0) {
-          container.classList.add('reversed');
-        }
-      
-        img.src = element.image;
-        title.innerText = element.title;
-        company.innerText = element.subtitle.jobtitle;
-        jobTitle.innerText = element.subtitle.position;
-        year.innerText = element.subtitle.year;
-        desc.innerText = element.description;
-        detailLink.addEventListener('click', () => {
-          showModal(index, true, data);
-        });
-      
-        element.techStack.forEach((ts) => {
-          const newTSnode = techStack.cloneNode(true);
-          const tsTitle = newTSnode.querySelector('[id=tech-stack-title]');
-          tsTitle.innerText = ts;
-          techStackContainer.appendChild(newTSnode);
-        });
-        portfolioSection.appendChild(newElement);
-      });
-    })
-  })
 
 const showModal = (id, show = false, data = []) => {
   const title = modalElement.querySelector('[id=title]');
@@ -64,7 +24,7 @@ const showModal = (id, show = false, data = []) => {
   const website = modalElement.querySelector('[id=website]');
   const githublink = modalElement.querySelector('a#github-link');
   const closeModal = modalElement.querySelector('[id=close-modal]');
-  
+
   if (show) {
     const content = data[id];
     title.innerText = content.title;
@@ -87,10 +47,10 @@ const showModal = (id, show = false, data = []) => {
   }
 
   closeModal.addEventListener('click', (e) => {
-    e.preventDefault()
+    e.preventDefault();
     showModal(null, false);
   });
-  
+
   if (techStackContainer.hasChildNodes && !show) {
     while (techStackContainer.firstChild) {
       techStackContainer.removeChild(techStackContainer.firstChild);
@@ -99,3 +59,40 @@ const showModal = (id, show = false, data = []) => {
   showOverlay();
   modalElement.classList.toggle('invisible');
 };
+
+fetch(`${sourcePath(url)}/app/scripts/jobsList.json`)
+  .then((e) => {
+    e.json().then(({ data }) => {
+      data.forEach((element, index) => {
+        const newElement = jobElement.cloneNode(true)
+        const container = newElement.querySelector('[id=container]');
+        const img = newElement.querySelector('[id=job-img]');
+        const title = newElement.querySelector('[id=title]');
+        const company = newElement.querySelector('[id=company]');
+        const jobTitle = newElement.querySelector('[id=job-title]');
+        const year = newElement.querySelector('[id=year]');
+        const desc = newElement.querySelector('[id=description]');
+        const techStackContainer = newElement.querySelector('[id=tech-stack-container]');
+        const detailLink = newElement.querySelector('[id=detail-link]');
+        if (index % 2 !== 0) {
+          container.classList.add('reversed');
+        }
+        img.src = element.image;
+        title.innerText = element.title;
+        company.innerText = element.subtitle.jobtitle;
+        jobTitle.innerText = element.subtitle.position;
+        year.innerText = element.subtitle.year;
+        desc.innerText = element.description;
+        detailLink.addEventListener('click', () => {
+          showModal(index, true, data);
+        });
+        element.techStack.forEach((ts) => {
+          const newTSnode = techStack.cloneNode(true);
+          const tsTitle = newTSnode.querySelector('[id=tech-stack-title]');
+          tsTitle.innerText = ts;
+          techStackContainer.appendChild(newTSnode);
+        });
+        portfolioSection.appendChild(newElement);
+      });
+    });
+  });
