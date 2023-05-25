@@ -6,17 +6,47 @@ const successMsg = document.querySelector('#success-message');
 const fullnameField = document.getElementById('fullname');
 const emailField = document.getElementById('email');
 const messageField = document.getElementById('message');
+let info = {
+  fullname: "",
+  email: "",
+  message: "",
+};
 
 window.onload = () => {
-  const storedFullname = localStorage.getItem('fullname');
-  const storedEmail = localStorage.getItem('email');
-  const storedMessage = localStorage.getItem('message');
-  if (storedFullname.length !== 0 || storedEmail.length !== 0 || storedMessage.length !== 0) {
-    emailField.value = storedEmail;
-    fullnameField.value = storedFullname;
-    messageField.value = storedMessage;
+  const data = localStorage.getItem('userData');
+  if (data !== null) {
+    const parsedData = JSON.parse(data);
+    fullnameField.value = parsedData.fullname;
+    emailField.value = parsedData.email;
+    messageField.value = parsedData.message;
   }
 };
+
+emailField.addEventListener('change', (e) => {
+  info.email = e.target.value;
+  storeData(info);
+});
+
+fullnameField.addEventListener('change', (e) => {
+  info.fullname = e.target.value;
+  storeData(info);
+});
+
+messageField.addEventListener('change', (e) => {
+  info.message = e.target.value;
+  storeData(info);
+  console.log(localStorage)
+});
+
+const storeData = (info) => {
+  let data = {
+    'fullname': info.fullname,
+    'email': info.email,
+    'message': info.message
+  }
+  let convert = JSON.stringify(data);
+  localStorage.setItem("userData", convert);
+}
 
 contact.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -62,10 +92,6 @@ contact.addEventListener('submit', (e) => {
     }).then((json) => {
       if (json.ok) {
         successMsg.classList.remove('invisible');
-        localStorage.clear();
-        localStorage.setItem('fullname', fullname);
-        localStorage.setItem('email', email);
-        localStorage.setItem('message', message);
       }
     });
   }
