@@ -703,6 +703,18 @@ body {
   display: none;
 }
 
+.success-message {
+  color: rgb(134, 255, 134);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 10px;
+}
+
 @media (max-width: 720px) {
   .desktop {
     display: none;
@@ -1325,7 +1337,19 @@ body {
   }
 
   .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
     padding: 10px;
+  }
+
+  .input-container small {
+    font-family: Poppins;
+    font-size: 12px;
+    line-height: 16px;
+    color: #dd3b3b;
+    margin-top: 8px;
   }
 
   .input-field {

@@ -54,8 +54,8 @@
               </div>
             </div>
             <div class="job-detail-buttons">
-                <div class="stack-section" id="tech-stack-container">
-                </div>
+              <div class="stack-section" id="tech-stack-container">
+              </div>
               <div class="card-footer">
                 <a href="#" class="show-button" id="website">
                   <p>See live</p>
@@ -288,17 +288,23 @@
             </p>
           </div>
           <div class="form-container">
-            <form action="https://formspree.io/f/xgebqege" method="POST">
+            <div class="success-message">
+              <p id="success-message" class="invisible">Thanks, i'll get back to you shortly.</p>
+            </div>
+            <form action="https://formspree.io/f/xgebqege" method="POST" id="contact">
               <div class="input-container">
-                <input type="text" class="input-field" placeholder="Full Name" maxlength="30" required
+                <input type="text" class="input-field" name="fullname" placeholder="Full Name" maxlength="30" required
                   name="fullname" />
+                <small id="fullname-err"></small>
               </div>
               <div class="input-container">
-                <input type="email" class="input-field" placeholder="Email" required name="email" />
+                <input type="email" class="input-field" name="email" placeholder="Email" required name="email" />
+                <small id="email-err"></small>
               </div>
               <div class="input-container">
-                <textarea type="text" class="text-field input-field" placeholder="Write your message here..."
-                  name="message" maxlength="500" required></textarea>
+                <textarea type="text" class="text-field input-field" name="message"
+                  placeholder="Write your message here..." name="message" maxlength="500" required></textarea>
+                <small id="msg-err"></small>
               </div>
               <div class="button-container">
                 <button type="submit" class="show-button contact-btn">Get In Touch</a>
@@ -312,5 +318,6 @@
   </div>
 </body>
 <script src="./app/scripts/main.js" async></script>
+<script src="./app/scripts/formValidation.js" async></script>
 
 </html>
