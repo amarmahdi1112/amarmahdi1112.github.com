@@ -1,17 +1,17 @@
-const jobElement = document.getElementById('job-element')
-const portfolioSection = document.getElementById('portfolio')
-const modalElement = document.getElementById('job-detail-element')
+const jobElement = document.getElementById('job-element');
+const portfolioSection = document.getElementById('portfolio');
+const modalElement = document.getElementById('job-detail-element');
 let techStack = document.querySelector('[id=tech-stack]');
 
-const url = document.location
+const url = document.location;
 
 const sourcePath = (url) => {
   let str = url.toString();
-  let strArr = str.split('/')
+  let strArr = str.split('/');
   strArr.pop();
   let joined = strArr.join('/');
-  return joined
-}
+  return joined;
+};
 
 const data = [
   {
@@ -81,12 +81,12 @@ const showModal = (id, show = false) => {
   const title = modalElement.querySelector('[id=title]');
   const img = modalElement.querySelector('[id=job-img]');
   const description = modalElement.querySelector('[id=description]');
-  const techStackContainer = modalElement.querySelector('[id=tech-stack-container]')
+  const techStackContainer = modalElement.querySelector('[id=tech-stack-container]');
   let company = modalElement.querySelector('[id=company]');
   let jobTitle = modalElement.querySelector('[id=job-title]');
   let year = modalElement.querySelector('[id=year]');
-  let website = modalElement.querySelector('[id=website]')
-  let githublink = modalElement.querySelector('a#github-link')
+  let website = modalElement.querySelector('[id=website]');
+  let githublink = modalElement.querySelector('a#github-link');
 
   if (show) {
     title.innerText = content.title;
@@ -110,12 +110,12 @@ const showModal = (id, show = false) => {
 
   if (techStackContainer.hasChildNodes && !show) {
     while (techStackContainer.firstChild) {
-      techStackContainer.removeChild(techStackContainer.firstChild)
+      techStackContainer.removeChild(techStackContainer.firstChild);
     }
   }
   showOverlay();
   modalElement.classList.toggle('invisible');
-}
+};
 
 data.forEach((element, index) => {
   const newElement = jobElement.cloneNode(true)
@@ -148,5 +148,5 @@ data.forEach((element, index) => {
     tsTitle.innerText = ts;
     techStackContainer.appendChild(newTSnode);
   });
-  portfolioSection.appendChild(newElement)
+  portfolioSection.appendChild(newElement);
 });

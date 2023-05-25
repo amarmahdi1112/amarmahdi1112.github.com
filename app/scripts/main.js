@@ -3,7 +3,7 @@ const closeNav = document.getElementById('close');
 const links = document.getElementsByClassName('links');
 const nav = document.getElementById('show-nav');
 const overlay = document.getElementById('overlay');
-let closeModal = document.querySelector('[id=close-modal]')
+let closeModal = document.querySelector('[id=close-modal]');
 
 const showOverlay = () => {
   overlay.classList.toggle('overlay-show');
