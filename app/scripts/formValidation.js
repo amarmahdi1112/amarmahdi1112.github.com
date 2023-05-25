@@ -16,7 +16,7 @@ window.onload = () => {
     fullnameField.value = storedFullname;
     messageField.value = storedMessage;
   }
-}
+};
 
 contact.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -55,7 +55,8 @@ contact.addEventListener('submit', (e) => {
       },
     }).then(async (response) => {
       if (response.ok) {
-        return await response.json();
+        let data = await response.json();
+        return data;
       }
       throw new Error('Response error!');
     }).then((json) => {
@@ -67,7 +68,6 @@ contact.addEventListener('submit', (e) => {
         localStorage.setItem('message', message);
       }
     }).catch((error) => {
-      console.log(error);
     });
   }
 });
