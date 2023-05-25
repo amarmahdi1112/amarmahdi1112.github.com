@@ -106,7 +106,6 @@ fetch(`${sourcePath(url)}/app/scripts/jobsList.json`)
     });
   });
 
-
 const showNav = () => {
   nav.classList.toggle('nav-show');
 };
