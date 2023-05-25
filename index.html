@@ -12,8 +12,71 @@
 <body>
   <div class="wrapper">
     <!-- Header section starts here -->
+    <div class="background-blur-menu overlay-hide" id="overlay"></div>
+    <div class="job-detail-component invisible" id="job-detail-element">
+      <div class="job-detail-container">
+        <div class="job-detail-title">
+          <div class="title-row">
+            <h2 id="title">Tonic</h2>
+            <span class="close" id="close-modal"></span>
+          </div>
+          <div class="card-subtitle">
+            <div class="card-el el1">
+              <p id="company">CANOPY</p>
+            </div>
+            <span class="dividor"></span>
+            <div class="card-el el2">
+              <p id="job-title">Back End Dev</p>
+            </div>
+            <span class="dividor"></span>
+            <div class="card-el el2">
+              <p id="year">2015</p>
+            </div>
+          </div>
+          <div class="job-detail-img">
+            <div class="card-img">
+              <div class="container">
+                <img src="./app/assets/pngs/jobs/job1.png" alt="" id="job-img" class="job-img" />
+              </div>
+            </div>
+          </div>
+          <div class="description-container job-desc">
+            <div class="job-detail-description job-detail-desc">
+              <div class="card-body">
+                <div class="card-description">
+                  <p id="description">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essent
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="job-detail-buttons">
+                <div class="stack-section" id="tech-stack-container">
+                </div>
+              <div class="card-footer">
+                <a href="#" class="show-button" id="website">
+                  <p>See live</p>
+                  <div class="btn-icon">
+                    <img src="./app/assets/pngs/icons/btn-icon1.svg" alt="" srcset="">
+                  </div>
+                </a>
+                <div class="spacer"></div>
+                <a href="#" class="show-button" id="github-link">
+                  <p>See source</p>
+                  <div class="btn-icon">
+                    <img src="./app/assets/pngs/icons/btn-icon2.svg" alt="" srcset="">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="header-section">
-      <div class="background-blur-menu overlay-hide" id="overlay"></div>
       <header class="main-header">
         <div class="logo">
           <a href="#">Amar</a>
@@ -24,9 +87,9 @@
             <img src="./app/assets/pngs/icons/close.png" alt="" srcset="">
           </div>
           <ul class="menu">
-              <li><a class="links" href="#portfolio">Portfolio</a></li>
-              <li><a class="links" href="#about">About</a></li>
-              <li><a class="links" href="#contact">Contact</a></li>
+            <li><a class="links" href="#portfolio">Portfolio</a></li>
+            <li><a class="links" href="#about">About</a></li>
+            <li><a class="links" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -72,205 +135,50 @@
     <!-- Header section ends here -->
     <!-- job lists starts here -->
     <section class="jobs" id="portfolio">
-      <div class="card">
-        <div class="card-container">
-          <div class="card-img">
-            <div class="container">
-              <img src="./app/assets/pngs/jobs/job1.png" alt="" class="job-img" />
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="container">
-              <div class="card-title">
-                <h1 class="card-title-text">Tonic</h1>
-              </div>
-              <div class="card-subtitle">
-                <div class="card-el el1">
-                  <p>CANOPY</p>
-                </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>Back End Dev</p>
-                </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>2015</p>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-description">
-                  <p>
-                    A daily selection of privately personalized reads; no accounts
-                    or sign-ups required.
-                  </p>
-                </div>
-                <div class="stack-section">
-                  <div class="stack-container">
-                    <span class="tech-stack">HTML</span>
-                  </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">CSS</span>
-                  </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">JavaScript</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="show-button">See Project</a>
+      <div class="invisible">
+        <div class="card" id="job-element">
+          <div class="card-container" id="container">
+            <div class="card-img">
+              <div class="container">
+                <img id="job-img" src="./app/assets/pngs/jobs/job1.png" alt="" class="job-img" />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-container reversed">
-          <div class="card-img">
-            <div class="container">
-              <img src="./app/assets/pngs/jobs/job2.png" alt="" class="job-img" />
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="container">
-              <div class="card-title">
-                <h1 class="card-title-text">Multi-Post Stories</h1>
-              </div>
-              <div class="card-subtitle">
-                <div class="card-el el1">
-                  <p>CANOPY</p>
+            <div class="card-content">
+              <div class="container">
+                <div class="card-title">
+                  <h1 class="card-title-text" id="title">Tonic</h1>
                 </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>Back End Dev</p>
-                </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>2015</p>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-description">
-                  <p>
-                    A daily selection of privately personalized reads; no accounts
-                    or sign-ups required.
-                  </p>
-                </div>
-                <div class="stack-section">
-                  <div class="stack-container">
-                    <span class="tech-stack">HTML</span>
+                <div class="card-subtitle">
+                  <div class="card-el el1">
+                    <p id="company">CANOPY</p>
                   </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">CSS</span>
+                  <span class="dividor"></span>
+                  <div class="card-el el2">
+                    <p id="job-title">Back End Dev</p>
                   </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">JavaScript</span>
+                  <span class="dividor"></span>
+                  <div class="card-el el2">
+                    <p id="year">2015</p>
                   </div>
                 </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="show-button">See Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-container">
-          <div class="card-img">
-            <div class="container">
-              <img src="./app/assets/pngs/jobs/job3.png" alt="" class="job-img" />
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="container">
-              <div class="card-title">
-                <h1 class="card-title-text">Tonic</h1>
-              </div>
-              <div class="card-subtitle">
-                <div class="card-el el1">
-                  <p>CANOPY</p>
-                </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>Back End Dev</p>
-                </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>2015</p>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-description">
-                  <p>
-                    A daily selection of privately personalized reads; no accounts
-                    or sign-ups required.
-                  </p>
-                </div>
-                <div class="stack-section">
-                  <div class="stack-container">
-                    <span class="tech-stack">HTML</span>
+                <div class="card-body">
+                  <div class="card-description">
+                    <p id="description">
+                      A daily selection of privately personalized reads; no accounts
+                      or sign-ups required.
+                    </p>
                   </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">CSS</span>
+                  <div class="invisible">
+                    <div class="stack-container" id="tech-stack">
+                      <span id="tech-stack-title" class="tech-stack">HTML</span>
+                    </div>
                   </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">JavaScript</span>
+                  <div class="stack-section" id="tech-stack-container">
                   </div>
                 </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="show-button">See Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-container reversed">
-          <div class="card-img">
-            <div class="container">
-              <img src="./app/assets/pngs/jobs/job4.png" alt="" class="job-img" />
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="container">
-              <div class="card-title">
-                <h1 class="card-title-text">Multi-Post Stories</h1>
-              </div>
-              <div class="card-subtitle">
-                <div class="card-el el1">
-                  <p>CANOPY</p>
+                <div class="card-footer">
+                  <button href="" type="button" class="show-button" id="detail-link">See Project</button>
                 </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>Back End Dev</p>
-                </div>
-                <span class="dividor"></span>
-                <div class="card-el el2">
-                  <p>2015</p>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-description">
-                  <p>
-                    A daily selection of privately personalized reads; no accounts
-                    or sign-ups required.
-                  </p>
-                </div>
-                <div class="stack-section">
-                  <div class="stack-container">
-                    <span class="tech-stack">HTML</span>
-                  </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">CSS</span>
-                  </div>
-                  <div class="stack-container">
-                    <span class="tech-stack">JavaScript</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="show-button">See Project</a>
               </div>
             </div>
           </div>
@@ -403,5 +311,6 @@
     <!-- contact section ends here -->
   </div>
 </body>
-<script src="./app/scripts/main.js"></script>
+<script src="./app/scripts/main.js" async></script>
+
 </html>
