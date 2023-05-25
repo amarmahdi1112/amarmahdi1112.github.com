@@ -18,6 +18,10 @@ const sourcePath = (url) => {
   return joined;
 };
 
+const showOverlay = () => {
+  overlay.classList.toggle('overlay-show');
+};
+
 const showModal = (id, show = false, data = []) => {
   const title = modalElement.querySelector('[id=title]');
   const img = modalElement.querySelector('[id=job-img]');
@@ -69,7 +73,7 @@ fetch(`${sourcePath(url)}/app/scripts/jobsList.json`)
   .then((e) => {
     e.json().then(({ data }) => {
       data.forEach((element, index) => {
-        const newElement = jobElement.cloneNode(true)
+        const newElement = jobElement.cloneNode(true);
         const container = newElement.querySelector('[id=container]');
         const img = newElement.querySelector('[id=job-img]');
         const title = newElement.querySelector('[id=title]');
@@ -102,9 +106,6 @@ fetch(`${sourcePath(url)}/app/scripts/jobsList.json`)
     });
   });
 
-const showOverlay = () => {
-  overlay.classList.toggle('overlay-show');
-};
 
 const showNav = () => {
   nav.classList.toggle('nav-show');
@@ -122,6 +123,7 @@ closeNav.addEventListener('click', () => {
 
 Array.from(links).forEach((element) => {
   element.addEventListener('click', () => {
-    tgl(false);
+    showOverlay();
+    showNav();
   });
 });
