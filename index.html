@@ -293,16 +293,16 @@
             </div>
             <form action="https://formspree.io/f/xgebqege" method="POST" id="contact">
               <div class="input-container">
-                <input type="text" class="input-field" name="fullname" placeholder="Full Name" maxlength="30" required
+                <input type="text" id="fullname" class="input-field" name="fullname" placeholder="Full Name" maxlength="30" required
                   name="fullname" />
                 <small id="fullname-err"></small>
               </div>
               <div class="input-container">
-                <input type="email" class="input-field" name="email" placeholder="Email" required name="email" />
+                <input type="email" id="email" class="input-field" name="email" placeholder="Email" required name="email" />
                 <small id="email-err"></small>
               </div>
               <div class="input-container">
-                <textarea type="text" class="text-field input-field" name="message"
+                <textarea type="text" id="message" class="text-field input-field" name="message"
                   placeholder="Write your message here..." name="message" maxlength="500" required></textarea>
                 <small id="msg-err"></small>
               </div>

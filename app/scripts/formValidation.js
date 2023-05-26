@@ -3,6 +3,44 @@ const fullnameErr = document.querySelector('#fullname-err');
 const emailErr = document.querySelector('#email-err');
 const msgErr = document.querySelector('#msg-err');
 const successMsg = document.querySelector('#success-message');
+const fullnameField = document.getElementById('fullname');
+const emailField = document.getElementById('email');
+const messageField = document.getElementById('message');
+const info = {
+  fullname: '',
+  email: '',
+  message: '',
+};
+
+window.onload = () => {
+  const data = localStorage.getItem('userData');
+  if (data !== null) {
+    const parsedData = JSON.parse(data);
+    fullnameField.value = parsedData.fullname;
+    emailField.value = parsedData.email;
+    messageField.value = parsedData.message;
+  }
+};
+
+const storeData = (info) => {
+  const convert = JSON.stringify(info);
+  localStorage.setItem('userData', convert);
+};
+
+emailField.addEventListener('change', (e) => {
+  info.email = e.target.value;
+  storeData(info);
+});
+
+fullnameField.addEventListener('change', (e) => {
+  info.fullname = e.target.value;
+  storeData(info);
+});
+
+messageField.addEventListener('change', (e) => {
+  info.message = e.target.value;
+  storeData(info);
+});
 
 contact.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -39,20 +77,16 @@ contact.addEventListener('submit', (e) => {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((response) => {
+    }).then(async (response) => {
       if (response.ok) {
-        return response.json();
+        const data = await response.json();
+        return data;
       }
       throw new Error('Response error!');
     }).then((json) => {
       if (json.ok) {
         successMsg.classList.remove('invisible');
-        elements[0].value = '';
-        elements[1].value = '';
-        elements[2].value = '';
       }
-    }).catch((error) => {
-      console.log(error);
     });
   }
 });
