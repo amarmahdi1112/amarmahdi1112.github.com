@@ -6,10 +6,10 @@ const successMsg = document.querySelector('#success-message');
 const fullnameField = document.getElementById('fullname');
 const emailField = document.getElementById('email');
 const messageField = document.getElementById('message');
-let info = {
-  fullname: "",
-  email: "",
-  message: "",
+const info = {
+  fullname: '',
+  email: '',
+  message: '',
 };
 
 window.onload = () => {
@@ -20,6 +20,11 @@ window.onload = () => {
     emailField.value = parsedData.email;
     messageField.value = parsedData.message;
   }
+};
+
+const storeData = (info) => {
+  const convert = JSON.stringify(info);
+  localStorage.setItem("userData", convert);
 };
 
 emailField.addEventListener('change', (e) => {
@@ -37,15 +42,6 @@ messageField.addEventListener('change', (e) => {
   storeData(info);
 });
 
-const storeData = (info) => {
-  let data = {
-    'fullname': info.fullname,
-    'email': info.email,
-    'message': info.message
-  }
-  let convert = JSON.stringify(data);
-  localStorage.setItem("userData", convert);
-}
 
 contact.addEventListener('submit', (e) => {
   e.preventDefault();
