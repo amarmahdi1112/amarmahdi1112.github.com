@@ -24,7 +24,7 @@ window.onload = () => {
 
 const storeData = (info) => {
   const convert = JSON.stringify(info);
-  localStorage.setItem("userData", convert);
+  localStorage.setItem('userData', convert);
 };
 
 emailField.addEventListener('change', (e) => {
@@ -41,7 +41,6 @@ messageField.addEventListener('change', (e) => {
   info.message = e.target.value;
   storeData(info);
 });
-
 
 contact.addEventListener('submit', (e) => {
   e.preventDefault();
